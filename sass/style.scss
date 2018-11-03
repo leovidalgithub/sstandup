@@ -1,0 +1,39 @@
+$color_back: #333;
+@mixin block($myWidth:90%) {
+    width: $myWidth;
+    margin: 15px auto;
+    border-radius: 3px;
+}
+html {
+    font-size: 16px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+header {
+    @include block(100%);
+    background-color: $color_back;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    h1 {
+        font-size: 2.5rem;
+    }
+    img {
+        width: 200px;
+        border-radius: 5px;
+    }
+}
+section {
+    @include block(85%);
+    background-color: lighten($color_back, 10);
+        img {
+        width: 300px;
+        border-radius: 5px;
+    }
+}
