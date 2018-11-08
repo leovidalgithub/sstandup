@@ -18,13 +18,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.post('/tracking', db);
 
 app.post('/contact', (req, res, next) => {
-    // let pepe = JSON.stringify(req.body);
-    // let pepe = JSON.parse(req.body);
-    console.log(req.body.data[0].thisname);
-    res.send('hello from here');
-    return;
+    const contactData = {
+        thisname : req.body.data[0].value,
+        thismail : req.body.data[1].value,
+        thisubject : req.body.data[2].value
+    }
 
-    let contactData = req.body;
     let randomMS = Math.floor(Math.random() * (1500 - 400 + 1)) + 400;
 
     sendThisMail(contactData, (err, data) => {
@@ -41,15 +40,14 @@ app.post('/contact', (req, res, next) => {
 // ************************************ SEND EMAIL ***********************************
 let sendThisMail = (data, callback) => {
     let mailOptions = {
-        from: data.email,
+        from: data.thismail,
         to: 'siciliastandup@siciliastandup.com',
-        subject: `SSU-${data.subject}`,
+        subject: `SSU- ${data.thisubject}`,
         html: `
                 <h2>siciliastandup FORM</h2>
-                <p>Nombre: ${data.name} </p>
-                <p>Correo: ${data.email}</p>
-                <p>Subject: ${data.subject} </p>
-                <p>Mensaje: ${data.msg}</p>
+                <p>Nombre: ${data.thisname} </p>
+                <p>Correo: ${data.thismail}</p>
+                <p>Mensaje: ${data.thisubject} </p>
                 `
     };
     transporter.sendMail(mailOptions, callback);
@@ -59,22 +57,3 @@ let sendThisMail = (data, callback) => {
 let server = app.listen(port, () => {
     console.log('Sicilia running at port %s', server.address().port);
 });
-
-
-
-//////////////////////////////////////////////////////////////////////////////
-// let nodemailer = require('nodemailer');
-// let mailOptions = {
-//     from: 'siciliastandup@siciliastandup.com',
-//     to: 'leo@leovidal.es',
-//     subject: 'Sending Email using Node.js',
-//     // text: 'That was easy!'
-//     html: '<h1>Anda para allá Welcome</h1><p>That was easy!</p>'
-// };
-// transporter.sendMail(mailOptions, function (error, info) {
-//     if (error) {
-//         console.log(error);
-//     } else {
-//         console.log('Email sent: ' + info.response);
-//     }
-// });
