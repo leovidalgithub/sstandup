@@ -1,109 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-.thisForm {
-  border-radius: 5px;
-  background-color: #e2dada;
-  max-width: 700px;
-  margin: 35px auto;
-  padding: 20px; }
-  .thisForm input[type=text], .thisForm select, .thisForm textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical; }
-  .thisForm input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color .7s ease; }
-    .thisForm input[type=submit]:hover {
-      background-color: #28882d; }
-    .thisForm input[type=submit].sending {
-      background-color: gray; }
-
-@media screen and (max-width: 760px) {
-  .thisForm {
-    margin: auto 15px; } }
-
-html {
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif; }
-
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: #1b1b1b;
-  font-size: 1.2rem; }
-  body .title {
-    margin: 25px 80px;
-    text-align: center; }
-
-header {
-  width: 100%;
-  margin: 5px auto;
-  border-radius: 3px;
-  background-color: #004074;
-  color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center; }
-  header h1 {
-    font-size: 2.6rem; }
-  header img {
-    width: 175px;
-    border-radius: 5px; }
-
-section {
-  width: 98%;
-  margin: 5px auto;
-  border-radius: 3px;
-  border: 1px solid #004074;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center; }
-  section .leftContent {
-    max-width: 700px; }
-  section .rightContent {
-    max-width: 300px;
-    text-align: center; }
-    section .rightContent img {
-      margin: 20px auto; }
-  section .idiota {
-    color: crimson;
-    font-size: 1.3rem; }
-  section img {
-    width: 300px;
-    border-radius: 5px; }
-
-footer {
-  height: 65px;
-  line-height: 65px;
-  padding-left: 35px;
-  background-color: #004074; }
-  footer a {
-    text-decoration: none;
-    color: white;
-    transition: all .4s ease-in-out; }
-    footer a:hover {
-      color: orange;
-      margin-left: 2px; }
-
-@media screen and (max-width: 1042px) {
-  section .rightContent {
-    max-width: 700px; } }
-
-@media screen and (max-width: 760px) {
-  section .leftContent {
-    margin: auto 15px;
-    max-width: 700px; } }
+@import url("https://fonts.googleapis.com/css?family=Montserrat");.thisForm{border-radius:5px;background-color:#e2dada;max-width:700px;margin:35px auto;padding:20px}
+.thisForm input[type=text],.thisForm input[type=email],.thisForm select,.thisForm textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;margin-top:6px;margin-bottom:16px;resize:vertical}
+.thisForm input[type=submit]{background-color:#4caf50;color:white;padding:12px 20px;border:0;border-radius:4px;cursor:pointer;transition:background-color .7s ease}
+.thisForm input[type=submit]:hover{background-color:#28882d}.thisForm input[type=submit].sending{background-color:gray}
+@media screen and (max-width:760px){.thisForm{margin:auto 15px}}html{font-size:16px;font-family:'Montserrat',sans-serif}
+body{box-sizing:border-box;margin:0;padding:0;color:#1b1b1b;font-size:1.2rem}body .title{margin:25px 80px;text-align:center}
+header{width:100%;margin:5px auto;border-radius:3px;background-color:#004074;color:white;padding-top:20px;padding-bottom:20px;display:flex;flex-flow:row wrap;justify-content:space-around;align-items:center}
+header h1{font-size:2.6rem}header img{width:175px;border-radius:5px}section{width:98%;margin:5px auto;border-radius:3px;border:1px solid #004074;display:flex;flex-flow:row wrap;justify-content:space-around;align-items:center}
+section .leftContent{max-width:700px}section .rightContent{max-width:300px;text-align:center}
+section .rightContent img{margin:20px auto}section .idiota{color:crimson;font-size:1.4rem;font-weight:bold;text-transform:uppercase}
+section img{width:300px;border-radius:5px}footer{height:85px;font-size:.9rem;margin-top:30px;background-color:#004074;display:flex;flex-flow:row nowrap;justify-content:space-around;align-items:center}
+footer a{text-decoration:none;color:white;transition:all .4s ease-in-out}footer a:hover{color:orange;margin-left:2px}
+footer img{vertical-align:middle;width:40px;height:40px}@media screen and (max-width:1042px){section .rightContent{max-width:700px}
+}@media screen and (max-width:760px){section .leftContent{margin:auto 15px;max-width:700px}
+footer span{display:none}}

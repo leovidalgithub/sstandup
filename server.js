@@ -42,7 +42,7 @@ let sendThisMail = (data, callback) => {
     let mailOptions = {
         from: data.thismail,
         to: 'siciliastandup@siciliastandup.com',
-        subject: `SSU- ${data.thisubject}`,
+        subject: `SSU- ${data.thisname}`,
         html: `
                 <h2>siciliastandup FORM</h2>
                 <p>Nombre: ${data.thisname} </p>
