@@ -1,50 +1,58 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical; }
-
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer; }
-
-input[type=submit]:hover {
-  background-color: #45a049; }
-
-section .container {
+.thisForm {
   border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin: auto 55px; }
+  background-color: #e2dada;
+  max-width: 700px;
+  margin: 35px auto;
+  padding: 20px; }
+  .thisForm input[type=text], .thisForm select, .thisForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; }
+  .thisForm input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .7s ease; }
+    .thisForm input[type=submit]:hover {
+      background-color: #28882d; }
+    .thisForm input[type=submit].sending {
+      background-color: gray; }
+
+@media screen and (max-width: 760px) {
+  .thisForm {
+    margin: auto 15px; } }
 
 html {
-  box-sizing: border-box;
   font-size: 16px;
   font-family: 'Montserrat', sans-serif; }
 
 body {
-  background-color: #e8e8e8;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: #1b1b1b;
   font-size: 1.2rem; }
+  body .title {
+    margin: 25px 80px;
+    text-align: center; }
 
 header {
   width: 100%;
   margin: 5px auto;
   border-radius: 3px;
-  background-color: #333;
+  background-color: #004074;
   color: white;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -56,18 +64,46 @@ header {
     border-radius: 5px; }
 
 section {
-  width: 85%;
+  width: 98%;
   margin: 5px auto;
   border-radius: 3px;
-  border: 1px solid #333;
-  text-align: center;
-  padding: 45px; }
-  section > * {
-    margin: 20px auto;
-    border: 1px solid greenyellow; }
-  section p:first-of-type {
-    margin: auto 80px;
-    color: red; }
+  border: 1px solid #004074;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center; }
+  section .leftContent {
+    max-width: 700px; }
+  section .rightContent {
+    max-width: 300px;
+    text-align: center; }
+    section .rightContent img {
+      margin: 20px auto; }
+  section .idiota {
+    color: crimson;
+    font-size: 1.3rem; }
   section img {
     width: 300px;
     border-radius: 5px; }
+
+footer {
+  height: 65px;
+  line-height: 65px;
+  padding-left: 35px;
+  background-color: #004074; }
+  footer a {
+    text-decoration: none;
+    color: white;
+    transition: all .4s ease-in-out; }
+    footer a:hover {
+      color: orange;
+      margin-left: 2px; }
+
+@media screen and (max-width: 1042px) {
+  section .rightContent {
+    max-width: 700px; } }
+
+@media screen and (max-width: 760px) {
+  section .leftContent {
+    margin: auto 15px;
+    max-width: 700px; } }

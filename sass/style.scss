@@ -1,28 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import 'form';
-$color_back: #333;
+$color_background: #004074;
 @mixin block($myWidth:90%) {
     width: $myWidth;
     margin: 5px auto;
     border-radius: 3px;
 }
 html {
-    box-sizing: border-box;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
 }
 body {
-    background-color: lighten($color_back, 71%);
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: #1b1b1b;
     font-size: 1.2rem;
+
+    .title {
+        margin: 25px 80px;
+        text-align: center;
+    }
 }
 header {
     @include block(100%);
-    background-color: $color_back;
+    background-color: $color_background;
     color: white;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -36,21 +41,56 @@ header {
     }
 }
 section {
-    @include block(85%);
-    border: 1px solid $color_back;
-    text-align: center;
-    padding: 45px;
-    > * {
-        margin: 20px auto;
-        border: 1px solid greenyellow;
+    @include block(98%);
+    border: 1px solid $color_background;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    .leftContent {
+        max-width: 700px;
     }
- 
-    p:first-of-type {
-        margin: auto 80px;
-        color: red;
-    }
+    .rightContent {
+        max-width: 300px;
+        text-align: center;
         img {
+            margin: 20px auto;
+        }
+    }
+    .idiota {
+        color: crimson;
+        font-size: 1.3rem;
+    }
+    
+    img {
         width: 300px;
         border-radius: 5px;
+    }
+}
+footer {
+    height: 65px;
+    line-height: 65px;
+    padding-left: 35px;
+    background-color: $color_background; 
+    a {        
+        text-decoration: none;
+        color: white;
+        transition: all .4s ease-in-out;
+        &:hover {
+            color: orange;
+            margin-left: 2px;
+        }
+    }
+}
+
+@media screen and (max-width: 1042px) {
+    section .rightContent {
+        max-width: 700px;
+    }
+}
+@media screen and (max-width: 760px) {
+    section .leftContent {
+        margin: auto 15px;
+        max-width: 700px;
     }
 }
